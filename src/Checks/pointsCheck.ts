@@ -35,9 +35,9 @@ async function checkisClaimeable(request:any, channelId: string) {
                 claimID: ClaimId
             }
         }
-        const claimrequest = await TwitchGQL._SendQuery("ClaimCommunityPoints", opts, '46aaeebe02c99afdf4fc97c7c0cba964124bf6b0af229395f1f6d1feed05b3d0', 'OAuth ' + userdata.auth_token, true, {}, true);
-        points = claimrequest[0].data.claimCommunityPoints.currentPoints
-        winston.info(chalk.gray('Claimed Channel Points...'), {event: "claim"})
+        //const claimrequest = await TwitchGQL._SendQuery("ClaimCommunityPoints", opts, '46aaeebe02c99afdf4fc97c7c0cba964124bf6b0af229395f1f6d1feed05b3d0', 'OAuth ' + userdata.auth_token, true, {}, true);
+        //points = claimrequest[0].data.claimCommunityPoints.currentPoints
+        winston.info(chalk.gray('Skipping Claimed Channel Points...'), {event: "claim"})
     }
 }
 
